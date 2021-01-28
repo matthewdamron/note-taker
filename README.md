@@ -45,7 +45,7 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 <!-- [![Watch the video](./utils/readme-generator.png)](https://drive.google.com/file/d/1fhJ8WjSsmwnVfBhrqTkjKFW5GMdggjMu/view?usp=sharing) -->
 
 ## Installation
-[Heroku](www.heroku.com)<br />
+[Heroku](https://www.heroku.com)<br />
 [node.js](https://nodejs.org)<br />
 `npm install`
 
