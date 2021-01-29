@@ -31,7 +31,7 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+});
 
 const saveNote = (note) =>
   fetch('/api/notes', {
@@ -40,7 +40,7 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  });
+});
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
@@ -48,31 +48,66 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+});
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
   if (activeNote.id) {
-    noteTitle.setAttribute('readonly', true);
-    noteText.setAttribute('readonly', true);
+    // noteTitle.setAttribute('readonly', true);
+    // noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
-    noteText.value = activeNote.title;
+    // noteText.value = activeNote.title;  error in code
+    noteText.value = activeNote.text;
   } else {
     noteTitle.value = '';
     noteText.value = '';
   }
 };
 
+// const handleNoteSave = () => {
+//   // console.log(activeNote.id);
+//   // ability to edit existing note
+//   // if (activeNote.id) {
+//   //   activeNote.title = noteTitle.value;
+//   //   activeNote.text = noteText.value;
+//   // } else {
+//     const newNote = {
+//       title: noteTitle.value,
+//       text: noteText.value,
+//     };
+//     saveNote(newNote).then(() => {
+//       getAndRenderNotes();
+//       renderActiveNote();
+//     });
+//   // }
+// };
+
 const handleNoteSave = () => {
-  const newNote = {
-    title: noteTitle.value,
-    text: noteText.value,
-  };
-  saveNote(newNote).then(() => {
-    getAndRenderNotes();
-    renderActiveNote();
-  });
+  // console.log(activeNote.id);
+  // ability to edit existing note
+  if (activeNote.id) {
+    const newNote = {
+      title: noteTitle.value,
+      text: noteText.value,
+      id: activeNote.id
+    };
+    saveNote(newNote).then(() => {
+      getAndRenderNotes();
+      renderActiveNote();
+      noteTitle.value = '';
+      noteText.value = '';
+    });
+  } else {
+    const newNote = {
+      title: noteTitle.value,
+      text: noteText.value,
+    };
+    saveNote(newNote).then(() => {
+      getAndRenderNotes();
+      renderActiveNote();
+    });
+  }
 };
 
 // Delete the clicked note
