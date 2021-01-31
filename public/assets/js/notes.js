@@ -52,7 +52,6 @@ const deleteNote = (id) =>
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
-
   if (activeNote.id) {
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
@@ -143,7 +142,7 @@ const renderNoteList = async (notes) => {
 
     const spanEl = document.createElement('span');
     spanEl.innerText = text;
-    if (jsonNotes.length != 0) {
+    if (jsonNotes.length > 0) {
       spanEl.addEventListener('click', handleNoteView);
     }
 
