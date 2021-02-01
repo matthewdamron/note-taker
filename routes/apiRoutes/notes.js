@@ -1,8 +1,6 @@
 const router = require('express').Router();
+const { nanoid } = require("nanoid");
 const { findById, createNewNote, editExistingNote, deleteExistingNote } = require('../../lib/notes');
-
-const { v4: uuidv4 } = require('uuid');
-
 const { notes } = require('../../data/notes');
 
 router.get('/notes', (req, res) => {
@@ -24,14 +22,15 @@ router.post('/notes', (req, res) => {
         const note = editExistingNote(req.body, notes);
         res.json(note);
     } else {
-        req.body.id = uuidv4();
+        req.body.id = nanoid();
         const note = createNewNote(req.body, notes);
         res.json(note);
     }
 });
 
 router.delete('/notes/:id', (req, res) => {
-    notes.splice(req.params.id, 1);
+    const index = notes.indexOf(findById(req.params.id, notes));
+    notes.splice(index, 1);
     deleteExistingNote(notes);
     res.json(notes);
 });

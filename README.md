@@ -15,7 +15,8 @@ Note Taker
 - [Questions](#questions)
 
 ## Description
-<!-- Need to add a description -->
+A web app to keep track of your notes.<br />
+You can add, edit and delete your notes!!
 
 ## User Story
 ```
@@ -45,25 +46,26 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 <!-- [![Watch the video](./utils/readme-generator.png)](https://drive.google.com/file/d/1fhJ8WjSsmwnVfBhrqTkjKFW5GMdggjMu/view?usp=sharing) -->
 
 ## Installation
-[Heroku](https://www.heroku.com)<br />
-[node.js](https://nodejs.org)<br />
-`npm install`
+No installation required.
 
 ## Usage
-After you install Node.js on your computer browse to the application location in your terminal.<br />
-Run the command 'node app' and folow the propmts to complete the index.html file.
+This is a live web app click [Note Taker](https://matthewdamron-note-taker.herokuapp.com/) to deploy!
 
 ## License
 ![GitHub](https://img.shields.io/github/license/matthewdamron/note-taker)<br />
 This application is covered by the MIT license. 
 
 ## Language
-<img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
+<img alt="Heroku" src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
+<img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
+<img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
 <img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+<img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
+<img alt="Express.js" src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/>
 
 ## Contributors
 Matt
 
 ## Questions
-Find me on GitHub: [matthewdamron](https://github.com/matthewdamron)<br />
-_This README was generated with by a [readme-generator](https://github.com/matthewdamron/readme-generator)_
+- Find me on GitHub: [Matt Damron](https://github.com/matthewdamron)<br />
+- Email me [Matt Damron](mailto:mattdamron@msn.com)
